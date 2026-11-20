@@ -29,7 +29,15 @@
 // - ContactSection
 
 /* --- YOUR IMPORTS GO HERE --- */
-
+import RibbonTicker from "./components/RibbonTicker";
+import NavBar from "./components/NavBar";
+import HeroSection from "./components/HeroSection";
+// import CtaSection from "./components/CtaSection";
+// import FeatureSection from "./components/FeaturesSection";
+// import ProductShowcase from "./components/ProductShowcase";
+// import AboutSection from "./components/AboutSection";
+import FooterSection from "./components/FooterSection";
+import ContactForm from "./components/ContactForm";
 
 // STEP 2: Create and export the App component
 // Use: export default function App() { ... }
@@ -54,3 +62,42 @@
 // for the navigation links in the NavBar.
 
 /* --- YOUR COMPONENT CODE GOES HERE --- */
+export default function App() {
+  return (
+    <div className="app">
+      {/* navbar */}
+      <NavBar />
+      {/* hero */}
+      <section className="hero bg-hero">
+        <div className="hero-grid">
+          <HeroSection />
+        </div>
+      </section>
+      <RibbonTicker />
+      {/*features / Corousel */}
+      {/* <section className="features bg-features" id="shop">
+        <FeatureSection />
+      </section> */}
+      {/*Product Showcase*/}
+      {/* <section className="bg-cta">
+        <ProductShowcase />
+      </section> */}
+      {/* CTA */}
+      {/* <section className="bg-cta">
+        <CtaSection />
+      </section> */}
+      {/*About*/}
+      {/* <section className="bg-cta" id="about">
+        <AboutSection />
+      </section> */}
+      {/*Contact Section*/}
+      <section className="bg-cta" id="contact">
+        <ContactForm />
+      </section>
+      {/*Footer*/}
+      <section className="bg-footer">
+        <FooterSection />
+      </section>
+    </div>
+  );
+}
